@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+    nginx:
+      build:
+        context: .
+        dockerfile: nginx/Dockerfile
+      container_name: nginx-container
+      volumes:
+        - ./php/:/var/www/html/
+      ports:
+       - 8080:80
+      depends_on:
+          - php
+
+    php:
+      build:
+        context: .
+        dockerfile: php/Dockerfile
