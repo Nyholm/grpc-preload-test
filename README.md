@@ -25,4 +25,3 @@ If the thread fails to restart, then the client can consume 2 x 3 = 6 requests. 
 
 See `php/php.ini` at the very bottom of the file to enable `opcache.preload`
 and `grpc.enable_fork_support`.
-
